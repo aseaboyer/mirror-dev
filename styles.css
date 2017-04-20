@@ -1,6 +1,7 @@
 html {
     background-color:black;
     color:white;
+    cursor:none;
     font-family:'Ubuntu', sans-serif;
     font-size:1em;
 }
