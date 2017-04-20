@@ -22,8 +22,15 @@ body {
 #current-date {
     font-size:1.6em;
 }
-#current-time {
-    font-size:2.3em;
+#current-time div.major span {
+    font-size:3em;
+}
+#current-time div {
+    display:inline-block;
+}
+#current-time div.minor span {
+    display:block;
+    font-size:1em;
 }
 
 #weather {
