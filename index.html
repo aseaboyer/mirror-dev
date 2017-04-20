@@ -2,19 +2,32 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>test a</title>
-  <meta name="description" content="Test A">
-  <meta name="author" content="Andrew Seaboyer">
-
-  <link rel="stylesheet" href="styles.css">
+    <title>Seattle MirrorMirror</title>
+    <meta name="description" content="Seattle MirrorMirror">
+    <meta name="author" content="Andy Seaboyer">
+    
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <p>TEST</p>
-  
-  
-  <script src="scripts.js"></script>
+    <section id="date">
+        <div id="current-time">
+            <span id="current-hour"></span>:<span id="current-minute"></span>:<span id="current-seconds"></span>
+            <span id="current-ampm"></span>
+        </div>
+        <div id="current-day"></div>
+        <div id="current-date"></div>
+    </section>
+    
+    <section id="weather">
+        <h1>Redmond, WA</h1>
+        <div id="current-weather">
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

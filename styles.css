@@ -1,4 +1,35 @@
 html {
-  background-color:black;
-  color:white;
+    background-color:black;
+    color:white;
+    font-family:'Ubuntu', sans-serif;
+    font-size:1em;
+}
+
+body {
+    margin:0;
+    padding:0;
+}
+
+#date {
+    left:1em;
+    position:absolute;
+    top:1em;
+}
+#current-day {
+    font-size:1.6em;
+}
+#current-date {
+    font-size:1.6em;
+}
+#current-time {
+    font-size:2.3em;
+}
+
+#weather {
+    bottom:1em;
+    left:1em;
+    position:absolute;
+}
+#current-weather {
+    
 }
