@@ -37,14 +37,15 @@ function requestWeather () {
 }
 function updateWeather (data) {
     var d = JSON.parse (data),
-        textVal;
+        textVal, weatherID;
     textVal = d.weather [0].description;
+    weatherID = d.weather [0].id;
     console.log (d);
     
     
-    if (d !== und) {
+    if (weatherID !== und) {
         //weatherIcon.setAttribute ("class", "wi"); // set to just wi
-        // Add the specific class
+        // Add a specific class
         //weatherIcon.classList.add ();
         
         weatherText.innerHTML = textVal;
