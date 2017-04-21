@@ -20,7 +20,7 @@ function updateTime () {
 function requestWeather () {
     var dataBack,
         updateFreq = (2 * 60 * 60 * 1000), // update in two hours
-        apiURL = "api.openweathermap.org/data/2.5/weather" + 
+        apiURL = "http://api.openweathermap.org/data/2.5/weather" + 
             "?zip=98052,us&appid=eb2878d64c328aa9b2009211c2eb1271",
         apiReq = new XMLHttpRequest();
     
