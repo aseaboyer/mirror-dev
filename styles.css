@@ -12,9 +12,9 @@ body {
 }
 
 #date {
-    left:1em;
+    left:0.3em;
     position:absolute;
-    top:1em;
+    top:0.1em;
 }
 #current-day {
     font-size:1.6em;
@@ -22,22 +22,30 @@ body {
 #current-date {
     font-size:1.6em;
 }
+#current-time {
+    
+}
 #current-time div.major span {
-    font-size:3em;
+    font-size:5em;
 }
 #current-time div {
     display:inline-block;
 }
 #current-time div.minor span {
     display:block;
-    font-size:1em;
+    font-size:1.8em;
 }
 
 #weather {
-    bottom:1em;
-    left:1em;
+    bottom:0.1em;
+    left:0.3em;
     position:absolute;
 }
 #current-weather {
     
+}
+
+#current-weather-icon {
+    font-size:6em;
+    margin:0.1em 0.2em;
 }
