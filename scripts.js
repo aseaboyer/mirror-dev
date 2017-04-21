@@ -27,7 +27,7 @@ function requestWeather () {
     // ping the api
     apiReq.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-           updateWeather (xhttp.responseText);
+           updateWeather (apiReq.responseText);
         }
     };
     apiReq.open("GET", apiURL, true);
