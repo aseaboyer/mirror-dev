@@ -37,9 +37,9 @@ function requestWeather () {
 }
 function updateWeather (data) {
     var d = JSON.parse (data);
-    console.log (data);
+    console.log (d);
     
-    if (dataBack !== und) {
+    if (d !== und) {
         //weatherIcon.setAttribute ("class", "wi"); // set to just wi
         // Add the specific class
         //weatherIcon.classList.add ();
