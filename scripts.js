@@ -1,5 +1,5 @@
 var und,
-    dayEle, dateEle, hourEle, minuteEle, secondEle, ampmEle, weatherIcon,
+    dayEle, dateEle, hourEle, minuteEle, secondEle, ampmEle, weatherIcon, weatherText,
     days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 function updateTime () {
@@ -36,13 +36,18 @@ function requestWeather () {
     var t = setTimeout(requestWeather, updateFreq); // update every two hours
 }
 function updateWeather (data) {
-    var d = JSON.parse (data);
+    var d = JSON.parse (data),
+        textVal;
+    textVal = d.weather [0].description;
     console.log (d);
+    
     
     if (d !== und) {
         //weatherIcon.setAttribute ("class", "wi"); // set to just wi
         // Add the specific class
         //weatherIcon.classList.add ();
+        
+        weatherText.innerHTML = textVal;
     }
     
 }
@@ -62,6 +67,7 @@ window.onload = function () {
     secondEle = document.getElementById('current-seconds');
     ampmEle = document.getElementById('current-ampm');
     weatherIcon = document.getElementById('current-weather-icon');
+    weatherText = document.getElementById('current-weather-text');
     
     updateTime ();
     requestWeather ();
