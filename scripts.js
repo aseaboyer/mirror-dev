@@ -76,7 +76,7 @@ function updateWeather (data) {
         weatherText.innerHTML = textVal;
         
         // set the temp
-        tempEle.innerHTML = d.main.temp + "&#176;";
+        tempEle.innerHTML = Math.round (d.main.temp) + "&#176;";
     }
     
 }
