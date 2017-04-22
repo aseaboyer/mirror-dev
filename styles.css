@@ -42,11 +42,14 @@ body {
     position:absolute;
 }
 #current-weather {
+    margin-left:0;
+}
+#current-weather-text {
     margin-bottom:1em;
 }
 #current-weather-icon {
     font-size:6em;
-    margin:0.1em 0.2em;
+    margin:0.1em 0.2em 0.1em 0;
 }
 #current-temp {
     font-size:4em;

@@ -42,7 +42,7 @@ function updateWeather (data) {
         textVal, weatherID;
     textVal = d.weather [0].description;
     weatherID = d.weather [0].id;
-    console.log (d);
+    //console.log (d);
     
     
     if (weatherID !== und) {
@@ -63,7 +63,7 @@ function updateWeather (data) {
         } else if (weatherID >= 801 && weatherID <= 804) {
             weatherIcon.classList.add ("wi-cloud"); // clouds
         } else if (weatherID >= 900 && weatherID <= 906) {
-            weatherIcon.classList.add ("wi-storm-showers"); // serious weather
+            weatherIcon.classList.add ("wi-tornado"); // serious weather
         } else if (weatherID >= 951 && weatherID <= 955) {
             weatherIcon.classList.add ("wi-windy"); // breeze
         } else if (weatherID >= 956 && weatherID <= 957) {
@@ -105,8 +105,4 @@ window.onload = function () {
     
     updateTime ();
     requestWeather ();
-    
-    console.log ("Bring in live weather");
-    console.log ("Transition alternative positoins with css, alter class with % something");
-    console.log ("Probably pump up those font sizes on the time");
 }
