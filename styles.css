@@ -45,7 +45,7 @@ body {
     margin-left:0;
 }
 #current-weather-text {
-    margin-bottom:1em;
+    margin:1em 0;
 }
 #current-weather-icon {
     font-size:6em;

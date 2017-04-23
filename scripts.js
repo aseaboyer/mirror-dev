@@ -4,18 +4,26 @@ var und,
     days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 function updateTime () {
-    var today = new Date;
-    var ampm = today.getHours () >= 12 ? 'pm' : 'am';
+    var today = new Date,
+        ampm;
+    ampm = today.getHours () >= 12 ? 'pm' : 'am';
     
-    dayEle.innerHTML = days [today.getDay ()];
-    dateEle.innerHTML = today.getMonth () + "/" + 
-        today.getDate () + "/" + today.getFullYear ();
     hourEle.innerHTML = (today.getHours () % 12);
     minuteEle.innerHTML = doubleDigits (today.getMinutes ());
     secondEle.innerHTML = doubleDigits (today.getSeconds ());
     ampmEle.innerHTML = ampm;
 
     var t = setTimeout(updateTime, 500); // update time
+}
+function updateDate () {
+    var today = new Date,
+        updateFreq = (60 * 1000);
+    
+    dayEle.innerHTML = days [today.getDay ()];
+    dateEle.innerHTML = (today.getMonth () + 1) + "/" + 
+        today.getDate () + "/" + today.getFullYear ();
+
+    var t = setTimeout(updateDate, updateFreq); // update time
 }
 
 function requestWeather () {
@@ -73,7 +81,7 @@ function updateWeather (data) {
         }
         
         // set the text
-        weatherText.innerHTML = textVal;
+        weatherText.innerHTML = "Expect: " + textVal;
         
         // set the temp
         tempEle.innerHTML = Math.round (d.main.temp) + "&#176;";
@@ -104,5 +112,6 @@ window.onload = function () {
     tempEle = document.getElementById('current-temp');
     
     updateTime ();
+    updateDate ();
     requestWeather ();
 }
