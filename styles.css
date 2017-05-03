@@ -12,10 +12,16 @@ body {
 }
 
 #date {
-    left:0.3em;
+    left:0.5%;
     position:absolute;
     top:0.1em;
+    transition:left 600ms, margin-left 1200ms;
 }
+body.right #date {
+    left:99.5%;
+    margin-left:-250px;
+}
+
 #current-day {
     font-size:1.6em;
 }
@@ -38,12 +44,23 @@ body {
 
 #weather {
     bottom:0.1em;
-    left:0.3em;
+    left:0.5%;
+    margin-left:0;
     position:absolute;
+    transition:left 900ms, margin-left 2000ms;
 }
+body.right #weather {
+    left:99.5%;
+    margin-left:-310px;
+}
+
 #current-weather {
     margin-left:0;
 }
+body.right #current-weather {
+    text-align:right;
+}
+
 #current-weather-text {
     margin:1em 0;
 }

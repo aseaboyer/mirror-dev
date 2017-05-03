@@ -14,7 +14,34 @@ function updateTime () {
     ampmEle.innerHTML = ampm;
 
     var t = setTimeout(updateTime, 500); // update time
+    
+    setSide (today.getMinutes ());
 }
+
+function setSide (minutes) {
+    var tenthsPlace = Math.floor (minutes * 0.1) % 2,
+        bodyClasses = document.body.classList;
+    
+    if (tenthsPlace == 0) {
+        if (bodyClasses.contains ("right")) {
+            bodyClasses.remove ("right");
+            bodyClasses.add ("left");
+        }
+        if (!bodyClasses.contains ("left")) {
+            bodyClasses.add ("left");
+        }
+        
+    } else {
+        if (bodyClasses.contains ("left")) {
+            bodyClasses.remove ("left");
+            bodyClasses.add ("right");
+        }
+        if (!bodyClasses.contains ("right")) {
+            bodyClasses.add ("right");
+        }
+    }
+}
+
 function updateDate () {
     var today = new Date,
         updateFreq = (60 * 1000);
